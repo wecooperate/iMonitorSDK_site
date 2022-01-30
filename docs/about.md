@@ -13,5 +13,5 @@ nav:
 
 <br/>
 
-**有任何商业合作、功能定制请 [联系我们](mailto://iMonitor@qq.com)**
+**有任何商业合作、功能定制请 [联系我们](mailto://admin@iMonitorSDK.com)**
 

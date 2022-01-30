@@ -18,6 +18,8 @@ nav:
 
 ## 软件截图
 
+
+
 <div class = "md_footer" >
-  <a href = "https://github.com/wecooperate/iRecorder"> <button class="main-button"> 获取软件 </button></a>
+  <a href = "https://github.com/wecooperate"> <button class="main-button"> 敬请期待 </button></a>
 </div>
