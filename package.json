@@ -12,6 +12,7 @@
   "module": "es/index.js",
   "typings": "es/index.d.ts",
   "dependencies": {
+    "@umijs/plugin-analytics": "^0.2.2",
     "react": "^16.12.0 || ^17.0.0"
   },
   "devDependencies": {

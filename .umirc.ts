@@ -18,4 +18,7 @@ export default defineConfig({
       path: 'https://gitee.com/wecooperate/iMonitorSDK',
     },
   ],
+  analytics: {
+    baidu: '00146cfaaf371815f1ce1bde54fc4307',
+  },
 });
