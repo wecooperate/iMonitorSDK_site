@@ -35,5 +35,5 @@ nav:
 
 <div class = "md_footer" >
   <a href = "https://github.com/wecooperate/iRecorder"> <button> 获取源码 </button></a>
-  <a href = "/publish/iRecorderInstaller.exe"> <button class="main-button"> 下载软件 </button></a>
+  <a href = "https://imonitorsdk.com/publish/iRecorderInstaller.exe"> <button class="main-button"> 下载软件 </button></a>
 </div>
