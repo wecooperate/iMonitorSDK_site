@@ -21,13 +21,19 @@ nav:
 - 记录的是每个软件是实际操作时间，而不是进程的运行时间。
 - 记录的是通过浏览器上网的地址，而不是其他途径访问的网络。
 - 可以记录每个软件的使用切换好像，分析工作是否频繁被打断。
+- **可以分析统计正在操作的Office文档路径**
+- **可以分析统计正在聊天的用户**
 
 ## 软件截图
 ![](./main.png)
 ![](./soft.png)
 ![](./soft_detail.png)
 ![](./url.png)
+![](./url_detail.png)
+![](./office.png)
+![](./im.png)
 
 <div class = "md_footer" >
-  <a href = "https://github.com/wecooperate/iRecorder"> <button class="main-button"> 获取源码 </button></a>
+  <a href = "https://github.com/wecooperate/iRecorder"> <button> 获取源码 </button></a>
+  <a href = "/publish/iRecorderInstaller.exe"> <button class="main-button"> 下载软件 </button></a>
 </div>
