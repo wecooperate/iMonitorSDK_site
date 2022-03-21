@@ -27,7 +27,7 @@ features:
     title: 规则引擎
     desc: 内置规则引擎，不需要写代码也可以实现强大的功能
 	
-footer: Copyright © 2022 创信长荣科技
+footer: Copyright © 2022 创信长荣网络工作室
 ---
 
 # 适用于如下的产品
