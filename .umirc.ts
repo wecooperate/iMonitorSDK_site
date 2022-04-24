@@ -13,10 +13,6 @@ export default defineConfig({
       title: 'GitHub',
       path: 'https://github.com/wecooperate/iMonitorSDK',
     },
-    {
-      title: 'Gitee',
-      path: 'https://gitee.com/wecooperate/iMonitorSDK',
-    },
   ],
   locales: [
     ['cn', '中文'], ['en', 'English']
