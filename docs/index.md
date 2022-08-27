@@ -2,8 +2,9 @@
 title: 系统行为监控开发套件
 hero:
   title: iMonitorSDK
-  desc: <h3>一款为终端、主机提供系统行为监控的开发套件 <br> 
-        <h5>旨在帮助终端安全、管控、审计、零信任、主机安全等行业应用可以快速实现必要功能，而不用关心底层驱动的开发、维护和兼容性问题，让其可以专注于业务开发。 <br>
+  desc: <h4 style="color:#0000cd;font-weight:bold;">一款为终端、主机提供系统行为监控的开发套件 <br> 
+        <h5>旨在帮助终端安全、管控、审计、零信任、主机安全等行业应用可以快速实现必要功能，而不用关心底层驱动的开发、维护和兼容性问题，让其可以专注于业务开发 <br>
+        <h6 style="color:#cd1616;">累计为10+家企业提供优质服务 <br>
   actions:
     - text: 快速开始
       link: /docs
@@ -27,7 +28,7 @@ features:
     title: 规则引擎
     desc: 内置规则引擎，不需要写代码也可以实现强大的功能
 	
-footer: Copyright © 2022 创信长荣网络工作室
+footer: Copyright © 2022 创信长荣科技
 ---
 
 # 适用于如下的产品
@@ -181,5 +182,5 @@ int main()
 
 <div class = "md_footer" >
   <a href = "https://github.com/wecooperate/iMonitorSDK/tree/master/sample"> <button> 更多示例 </button></a>
-  <a href = "https://github.com/wecooperate/iMonitor"> <button class="main-button"> SDK 下载 </button></a>
+  <a href = "https://github.com/wecooperate/iMonitorSDK"> <button class="main-button"> SDK 下载 </button></a>
 </div>

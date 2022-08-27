@@ -23,6 +23,7 @@ interface IMonitorManager : public IUnknown
 	virtual HRESULT			Start				(IMonitorCallback* Callback) = 0;
 	virtual HRESULT			Control				(PVOID Data, ULONG Length, PVOID OutData, ULONG OutLength, PULONG ReturnLength) = 0;
 	virtual HRESULT			Stop				(void) = 0;
+    virtual HRESULT         UnloadDriver        (void) = 0
 	
 	virtual	HRESULT			CreateRuleEngine	(LPCWSTR Path, IMonitorRuleEngine** Engine) = 0;
 	virtual	HRESULT			CreateAgentEngine	(ULONG MaxThread, IMonitorAgentEngine** Engine) = 0;
@@ -33,8 +34,9 @@ interface IMonitorManager : public IUnknown
 | ----------------- | ------------------------------------------------------------ |
 | Start             | 设置驱动回调、安装并启动驱动                                 |
 | Control           | 跟驱动通讯的入口，详细参考cxMSGUserXxxx结构体                |
-| CreateRuleEngine  | 应用层扩展功能： 加载基于jsonlogic的规则引擎，详细参考[规则引擎](/docs/规则引擎)部分 |
-| CreateAgentEngine | 应用层扩展功能：创建网络中间人服务器，详细参考[网络代理](/docs/网络代理)部分 |
+| CreateRuleEngine  | 应用层扩展功能： 加载基于jsonlogic的规则引擎，详细参考[规则引擎](/docs/rule)部分 |
+| CreateAgentEngine | 应用层扩展功能：创建网络中间人服务器，详细参考[网络代理](/docs/agent)部分 |
+| UnloadDriver      | 停止并卸载驱动                                               |
 
 #### 支持的Control参数类型
 
@@ -134,3 +136,7 @@ interface IMonitorMessage
 | SetInjectDll        | 对当前进程注入动态库（自己判断是32位的还是64位进程）         |
 | SetIPRedirect       | 对于Tcp连接，可以设置IP、Port重定向到新的地址                |
 | IsMatch             | 内置通配符字符串匹配，支持 * ？ >  （> 表示目录，dir>  等同于 dir + dir\\\\*） IgnoreCase表示是否忽略大小写，默认忽略 |
+
+### iMonitorSDKExtesnion
+
+在应用层实现的能力扩展，详细参考[规则引擎](/docs/rule)、[网络代理](/docs/agent)。
