@@ -180,6 +180,41 @@ int main()
 }
 ```
 
+# 监控扩展
+
+iMonitorSDK不仅仅提供了核心位置的监控，同时也提供了一整套的监控框架，基于这个框架，可以很简单的自己实现扩展的监控点。
+
+比如进程启动的演示代码如下：
+
+```c++
+		do {
+			cxProcessPtr process(ProcessId);
+
+			if (!process)
+				break;
+
+			cxMSGProcessCreate msg;
+
+			if (!msg.IsEnable())
+				break;
+
+			msg.ProcessId = process->m_ProcessId;
+			msg.Path = process->m_Path;
+			msg.Commandline = process->m_Commandline;
+			msg.CreateTime = process->m_CreateTime;
+            ...
+			msg.Dispatch();
+
+			if (msg.IsDeny()) {
+				// Disable Process Create
+			}
+		}
+
+根据IDL自动生成cxMSGProcessCreate对象，设置好cxMSGProcessCreate的各个字段后，调用Dispatch后就会跟应用层通信（根据应用层设置的配置，可以是同步，也可以是异步），如果是同步的，可以通过应用层设置回来Action，然后做出相应的反馈（比如禁止、注入、重定向等等）。
+```
+
+
+
 <div class = "md_footer" >
   <a href = "https://github.com/wecooperate/iMonitorSDK/tree/master/sample"> <button> 更多示例 </button></a>
   <a href = "https://github.com/wecooperate/iMonitorSDK"> <button class="main-button"> SDK 下载 </button></a>
