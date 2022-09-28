@@ -18,6 +18,11 @@ nav:
 
 #### 添加微信
 
-添加的时候请添加说明：企业信息 - 添加微信原因 （比如：创信长荣 - 咨询iMonitorSDK授权）
+添加的时候请添加说明：企业信息 - 添加微信原因 （比如：xx公司 - 咨询iMonitorSDK授权）
 
-<img src="./wechat.jpg" style="zoom:50%;" />
+<img src="./wechat.jpg" style="zoom:50%;" /> 
+
+#### 微信公众号
+关注微信公众号可以获取各类安全资讯、技术文章、功能更新
+
+ <img src="./qrcode.jpg"  style="zoom:80%;" />
