@@ -3,7 +3,7 @@ order: 0
 nav:
   path: /docs
   title: 文档
-  order: 0
+  order: 1
 ---
 
 ## 快速开始
