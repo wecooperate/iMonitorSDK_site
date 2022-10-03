@@ -67,7 +67,7 @@ iMonitor（冰镜 - 终端行为分析系统）是一款基于[iMonitorSDK](/)�
 ## 软件下载
 
 <div class = "md_footer" >
-  <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
-  <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
   <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
+  <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
+  <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
 </div>
