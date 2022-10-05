@@ -67,7 +67,7 @@ KnownDLLs注册表项的路径为 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Co
 
 ### 拷贝DLL到程序目录的方式
 
-比如，基本的程序都会依赖version.dll（其他的DLL都可以），而version.dll的系统的DLL，但是加载搜索的过程，优先级最高是程序的当前目录，那么就可以自己制作一个假的version.dll（为了功能可以，需要同时把调用映射回真实的version.dll，如果不会操作，后续可以提供对应的工具），然后放到程序的目录下面，这样程序启动就会自动加载这个假的DLL。
+比如，基本的程序都会依赖version.dll（其他的DLL都可以），而version.dll是系统的DLL，但是加载搜索的过程，优先级最高是程序的当前目录，那么就可以自己制作一个假的version.dll（为了功能可以，需要同时把调用映射回真实的version.dll，如果不会操作，后续可以提供对应的工具），然后放到程序的目录下面，这样程序启动就会自动加载这个假的DLL。
 
 在这个DLL里面可以做一些Hook操作，这样就可以篡改程序的逻辑，比如修改日期绕过试用期达到破解的目的。
 
