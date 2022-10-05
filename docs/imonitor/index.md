@@ -16,10 +16,32 @@ iMonitor（冰镜 - 终端行为分析系统）是一款基于[iMonitorSDK](/)�
 ![](./all.gif)
 
 ![](./main.png)
+
 ![](./address.png)
+
 ![](./detail.png)
 
+![](./snapshot.png)
+
+![](./dll.png)
+
 ## 更新说明
+
+### 2.1（2022.10.5）
+
+- 添加事件快照支持
+  - 快照支持排序
+- 添加动态库加载分析（属性 - Dependency）
+  - 可以分析Dll丢失、Dll存在挟持风险
+- 修复查找任意列导致的崩溃问题
+
+感谢sagasm反馈的使用意见。
+
+<div class = "md_footer" >
+  <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
+  <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
+  <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
+</div>
 
 ### 2.0（2022.09.14）
 
@@ -63,6 +85,7 @@ iMonitor（冰镜 - 终端行为分析系统）是一款基于[iMonitorSDK](/)�
   - 添加安装包
 
 ### 1.0（2022.03.14）
+首次开源版本
 
 ## 软件下载
 
