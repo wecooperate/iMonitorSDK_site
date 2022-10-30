@@ -1,16 +1,7 @@
 ---
-title: iMonitor插件开发指南（C++篇）
-group:
-  title: 技术文章
+title: 插件开发指南
+order: 1
 ---
-
-# iMonitor插件开发指南（C++篇）
-
-## 简介
-
-iMonitor（冰镜 - 终端行为分析系统）是一款基于iMonitorSDK的终端行为监控分析软件。
-
-提供了对进程、文件、注册表、网络等系统行为的监控。支持扩展和脚本，可以轻易定制和添加更多功能。可以用于病毒分析、软件逆向、入侵检测，EDR等。
 
 ## iMonitor核心概念介绍
 
@@ -236,23 +227,20 @@ void UIExtension::OnMessageMenu(QMenu* Menu, IMessage* Message, IMessageColumn* 
 
 上面示例的全部代码可以通过 https://github.com/wecooperate/iMonitor/tree/main/src/plugins 获取。
 
-## iMonitor脚本支持
+## 插件安装
 
-用C++开发插件成本会比较大，使用JavaScript来扩展会更加方便，功能正在内测中，后续上线后会添加完整的使用说明。
+iMonitor的插件分为两类
 
-```typescript
-使用TypeScript来添加一个列的使用效果：
+- 系统插件
 
-@MessageColumn("TestScript")
-class TestColumn implements IMessageColumn {
-    GetString(msg: IMessage): string {
-        if (msg.Type == MessageType.ProcessCreate) {
-            let msgProcessCreate = msg as Message.ProcessCreate;
-            return msgProcessCreate.Commandline;
-        }
+  跟随安装包安装，在安装目录的scripts目录下面，重新安装后这个目录会被覆盖
 
-        return msg.Process.Commandline;
-    }
-}
-```
+- 用户插件
 
+  用户自己开发的插件，插件目录为 C:\ProgramData\iMonitor\scripts
+
+  如果自己开发了插件，可以放到插件目录，重启后即可加载
+
+## 插件市场
+
+正在建设中
