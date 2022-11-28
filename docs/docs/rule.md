@@ -10,47 +10,66 @@ order: 3
 ### 接口说明
 
 ```cpp
-interface IMonitorRuleCallback
+interface IMonitorRule
+{
+	virtual	const char*		GetId				(void) = 0;
+	virtual const char*		GetName				(void) = 0;
+	virtual const char*		GetDescription		(void) = 0;
+	virtual const char*		GetGroupName		(void) = 0;
+	virtual ULONG			GetAction			(void) = 0;
+	virtual const char*		GetActionParam		(void) = 0;
+	virtual	ULONG			GetMessageTypeCount	(void) = 0;
+	virtual ULONG			GetMessageType		(ULONG Index) = 0;
+};
+
+interface IMonitorMessageField
+{
+	using RuleString = CStringW;
+	using RuleNumber = ULONGLONG;
+
+	virtual	bool			GetString			(IMonitorMessage* Object, RuleString& Value) = 0;
+	virtual bool			GetNumber			(IMonitorMessage* Object, RuleNumber& Value) = 0;
+};
+
+interface IMonitorRuleContext
+{
+	virtual IMonitorMessageField* GetCustomField(const char* Field) = 0;
+};
+
+interface IMonitorMatchCallback
 {
 	enum emMatchStatus {
 		emMatchStatusBreak,
 		emMatchStatusContinue,
 	};
 
-	struct MatchResult {
-		ULONG				Action;
-		const char*			ActionParam;
-		const char*			GroupName;
-		const char*			RuleName;
-	};
-
 	virtual void			OnBeginMatch		(IMonitorMessage* Message) {}
 	virtual void			OnFinishMatch		(IMonitorMessage* Message) {}
-	virtual emMatchStatus	OnMatch				(IMonitorMessage* Message, const MatchResult& Result) = 0;
+	virtual emMatchStatus	OnMatch				(IMonitorMessage* Message, IMonitorRule* Rule) = 0;
 };
 
-interface IMonitorRuleEngine : public IUnknown
+interface __declspec(uuid("51237525-2811-4BE2-A6A3-D8889E0D0CA1")) IMonitorRuleEngine : public IUnknown
 {
-	virtual void			Match				(IMonitorMessage* Message, IMonitorRuleCallback* Callback) = 0;
-    virtual void			EnumAffectedMessage	(void(*Callback)(ULONG Type, void* Context), void* Context) = 0;
+	virtual void			Match				(IMonitorMessage* Message, IMonitorMatchCallback* Callback) = 0;
+	virtual void			EnumRule			(void(*Callback)(IMonitorRule* Rule, void* Context), void* Context) = 0;
 };
 ```
 
-| 函数                | 说明                                                         |
-| ------------------- | ------------------------------------------------------------ |
-| Match               | 在IMonitorCallback回调里匹配规则，匹配结果通过IMonitorRuleCallback通知 |
-| EnumAffectedMessage | 查询当前规则影响了哪些事件，方便设置需要监控的事件           |
-|                     |                                                              |
-| OnBeginMatch        | 开始匹配，可以初始化一些状态                                 |
-| OnFinishMatch       | 匹配结束，可以做反初始化                                     |
-| OnMatch             | 匹配到规则，这里可以返回是否继续匹配下一条规则，还是终止匹配 |
+| 函数          | 说明                                                         |
+| ------------- | ------------------------------------------------------------ |
+| Match         | 在IMonitorCallback回调里匹配规则，匹配结果通过IMonitorMatchCallback通知 |
+| EnumRule      | 遍历全部规则                                                 |
+|               |                                                              |
+| OnBeginMatch  | 开始匹配，可以初始化一些状态                                 |
+| OnFinishMatch | 匹配结束，可以做反初始化                                     |
+| OnMatch       | 匹配到规则，这里可以返回是否继续匹配下一条规则，还是终止匹配 |
 
 ### 使用说明
 
 ```cpp
 class MonitorCallback
 	: public IMonitorCallback
-	, public IMonitorRuleCallback
+	, public IMonitorMatchCallback
 {
 public:
 	void OnCallback(IMonitorMessage* Message) override
@@ -58,9 +77,9 @@ public:
 		m_RuleEngine->Match(Message, this);
 	}
 
-	emMatchStatus OnMatch(IMonitorMessage* Message, const MatchResult& Result) override
+	emMatchStatus OnMatch(IMonitorMessage* Message, IMonitorRule* Rule) override
 	{
-		if (Result.Action & emMSGActionBlock) {
+		if (Rule->GetAction() & emMSGActionBlock) {
 			Message->SetBlock();
 			printf("match block rule %s.%s\n", Result.GroupName, Result.RuleName);
 			return emMatchStatusBreak;
@@ -117,7 +136,7 @@ public:
 | name         | 规则名                                                       |
 | action       | 匹配后的动作，在OnMatch里面使用，可以根据emMSGActionBlock来拦截操作，也可以自定义类型做其他业务相关的操作 |
 | action_param | 匹配后的动作参数，在OnMatch里面使用                          |
-| event        | 数组或者字符串，表示当前规则针对哪些消息类型有效；如果是字符串并且是 * 表示全部的事件 |
+| event        | 数组或者字符串，表示当前规则针对哪些消息类型有效             |
 | matcher      | 匹配条件                                                     |
 
 #### 规则匹配条件
@@ -132,21 +151,61 @@ public:
 >
 > value表示匹配的值，具体类型参考operator
 
-| operator | value类型 | 说明                                           |
-| -------- | --------- | ---------------------------------------------- |
-| child    | struct    | 子节点匹配，支持 CurrentProcess、Process、File |
-| or       | array     | 表示数组下任意规则匹配                         |
-| and      | array     | 表示数组下全部规则匹配                         |
-| bool     | bool      | 直接返回value的值                              |
-| equal    | string    | 字符串相等                                     |
-| !equal   | string    | 字符串不相等                                   |
-| match    | string    | 表示通配符的字符串匹配，忽略大小写             |
-| !match   | string    | match的相反                                    |
-| ==       | number    | 等于                                           |
-| !=       | number    | 不等于                                         |
-| >        | number    | 大于                                           |
-| <        | number    | 小于                                           |
-| >=       | number    | 大于等于                                       |
-| <=       | number    | 小于等于                                       |
-| &        | number    | 包含                                           |
-| !&       | number    | 不包含                                         |
+| operator   | value类型 | 说明                                                         |
+| ---------- | --------- | ------------------------------------------------------------ |
+| or         | array     | 表示数组下任意规则匹配                                       |
+| and        | array     | 表示数组下全部规则匹配                                       |
+| bool       | bool      | 直接返回value的值                                            |
+|            |           |                                                              |
+| equal      | string    | 字符串相等                                                   |
+| !equal     | string    | 字符串不相等                                                 |
+| match      | string    | 表示通配符的字符串匹配                                       |
+| !match     | string    | match的相反                                                  |
+| include    | string    | 包含                                                         |
+| !include   | string    | 不包含                                                       |
+| regex      | string    | 正则匹配                                                     |
+| !regex     | string    | 正则匹配失败                                                 |
+|            |           |                                                              |
+| 注意！！！ |           | 上面字符串默认都是不区分大小写，如果需要区分大小写则使用大写的方式，比如： |
+|            |           | EQUAL 表示字符串相等，并且大小写敏感                         |
+|            |           |                                                              |
+| ==         | number    | 等于                                                         |
+| !=         | number    | 不等于                                                       |
+| >          | number    | 大于                                                         |
+| <          | number    | 小于                                                         |
+| >=         | number    | 大于等于                                                     |
+| <=         | number    | 小于等于                                                     |
+| &          | number    | 包含                                                         |
+| !&         | number    | 不包含                                                       |
+
+### 匹配扩展字段
+
+除了基本的字段，规则引擎内部也内置了一些常见的扩展
+
+| 字段                    | 含义                                                         |
+| ----------------------- | ------------------------------------------------------------ |
+| AccessModifiable        | 表示CreateFile、OpenProcess等存在Access的操作，是否具备写、删除等权限 |
+| Address                 | 网络操作时的地址远程地址，比如：127.0.0.1:8080               |
+|                         |                                                              |
+| Path.Ext                | 文件后缀名： .dll                                            |
+| Path.FileName           | 文件名                                                       |
+|                         |                                                              |
+| Process.ProcessPath     | 进程路径                                                     |
+| Process.ProcessName     | 进程名称                                                     |
+| Process.Commandline     | 进程命令行                                                   |
+| Process.CompanyName     | 进程文件对应的公司名称                                       |
+| Process.ProductName     | 进程文件对应的产品名                                         |
+| Process.FileDescription | 进程文件对应的描述信息                                       |
+|                         |                                                              |
+| CurrentProcess.Xxxx     | Xxxx同Process的字段，表现操作进程的字段                      |
+
+#### 开发扩展字段
+
+```C++
+interface IMonitorRuleContext
+{
+	virtual IMonitorMessageField* GetCustomField(const char* Field) = 0;
+};
+```
+
+可以通过Context返回对应的接口提供
