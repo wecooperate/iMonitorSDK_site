@@ -48,6 +48,15 @@ nav:
 
 ## 版本说明
 
+### 2.0.1.0
+
+- 添加多语言支持
+- 修复界面一些小问题
+
+<div class = "md_footer" >
+  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
+</div>
+
 ### 2.0.0.0
 
 - 重构规则引擎的实现，使用更加高效简单、容易扩展
