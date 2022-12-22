@@ -25,6 +25,7 @@ nav:
 - 联网控制 - 保护个人隐私
 - 行为管理 - 安全上网
 - 病毒拦截 - 云引擎自动拦截病毒
+- 隐私保护 - 保护您的数据不被流氓软件偷偷上传
 
 ## 软件截图
 
@@ -40,6 +41,8 @@ nav:
 
 ![home](./doc/rule_file_protect.png)
 
+![home](./doc/rule_privacy.png)
+
 ![home](./doc/rule_adv.png)
 
 ![home](./doc/rule_pro.png)
@@ -48,14 +51,20 @@ nav:
 
 ## 版本说明
 
-### 2.0.1.0
+### 2.1.0.0
 
-- 添加多语言支持
-- 修复界面一些小问题
+- 添加监控快捷开关
+- 添加允许开启只读文件监控
+- 添加隐私保护规则模板
 
 <div class = "md_footer" >
   <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
 </div>
+
+### 2.0.1.0
+
+- 添加多语言支持
+- 修复界面一些小问题
 
 ### 2.0.0.0
 
