@@ -51,15 +51,38 @@ nav:
 
 ## 版本说明
 
+### 2.2.0.0
+
+- 响应事件添加信任模式
+
+- 添加白名单规则模板
+
+- 规则模板添加默认参数支持
+
+- 进程路径参数支持从进程列表快速获取
+
+- 添加更多规则模板
+
+  - 禁止加载驱动
+  - 禁止加载动态库
+  - 禁止打开进程
+  - 禁止进程修改文件
+  - 禁止进程读取注册表
+  - 禁止进程修改注册表键
+  - 禁止进程修改注册表值
+  - 注册表保护
+
+<div class = "md_footer" >
+  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
+</div>
+
 ### 2.1.0.0
 
 - 添加监控快捷开关
 - 添加允许开启只读文件监控
 - 添加隐私保护规则模板
 
-<div class = "md_footer" >
-  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
-</div>
+
 
 ### 2.0.1.0
 
