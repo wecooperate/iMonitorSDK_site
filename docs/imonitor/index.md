@@ -29,11 +29,11 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 
 ## 更新说明
 
-### 2.2.0（2022.10.30）
+### 2.2.1
 
-- **添加脚本支持**（可以使用脚本来扩展列、自定义匹配器）详细参考[脚本开发指南](https://imonitorsdk.com/imonitor/script)
-- 优化若干使用体验
-- 修复一些小问题
+- 更新驱动到最新的版本
+- Win7添加通过HCK认证的驱动，解决驱动无法正常加载的问题
+
 
 <div class = "md_footer" >
   <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
@@ -41,12 +41,17 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
   <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
 </div>
 
+### 2.2.0（2022.10.30）
+
+- **添加脚本支持**（可以使用脚本来扩展列、自定义匹配器）详细参考[脚本开发指南](https://imonitorsdk.com/imonitor/script)
+- 优化若干使用体验
+- 修复一些小问题
+
+
 ### 2.1.1（2022.10.7）
 
 - 调整分组跟过滤的优先级（之前是先分组后过滤，现在是先过滤后再分组）
 - 修复选择列导致崩溃的问题
-
-
 
 ### 2.1（2022.10.5）
 
