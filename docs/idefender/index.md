@@ -51,6 +51,21 @@ nav:
 
 ## 版本说明
 
+### 2.3.0.0
+
+- 添加IPv6、ICMP支持
+- **网络拦截规则添加域名支持**
+- **添加上网行为管理（HTTP拦截）支持**
+- 添加HTTP请求自定义响应结果支持
+- 添加规则分享支持
+- **添加规则市场支持，可以通过规则市场直接下载其他人分享的规则**
+- 优化一些界面使用体验
+- 修复一些问题
+
+<div class = "md_footer" >
+  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
+</div>
+
 ### 2.2.0.0
 
 - 响应事件添加信任模式
@@ -71,10 +86,6 @@ nav:
   - 禁止进程修改注册表键
   - 禁止进程修改注册表值
   - 注册表保护
-
-<div class = "md_footer" >
-  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
-</div>
 
 ### 2.1.0.0
 
