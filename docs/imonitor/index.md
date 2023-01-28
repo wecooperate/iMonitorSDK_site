@@ -29,10 +29,13 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 
 ## 更新说明
 
-### 2.2.1
+### 2.3.0
 
 - 更新驱动到最新的版本
-- Win7添加通过HCK认证的驱动，解决驱动无法正常加载的问题
+- 更新IP2Region地址库到最新的版本
+- 添加IPv6网络监控支持
+- 添加IP地址转换成域名显示（需要自定义列里面选择Domain）
+- 修复HTTP监控端口冲突的问题
 
 
 <div class = "md_footer" >
@@ -40,6 +43,11 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
   <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
   <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
 </div>
+
+### 2.2.1
+
+- 更新驱动到最新的版本
+- Win7添加通过HCK认证的驱动，解决驱动无法正常加载的问题
 
 ### 2.2.0（2022.10.30）
 
