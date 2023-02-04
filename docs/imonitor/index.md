@@ -27,7 +27,20 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 
 ![](./script.png)
 
+![](./domain.png)
+
 ## 更新说明
+
+### 2.4.0
+
+- 添加进程列表视图
+- 修复一些体验问题
+
+<div class = "md_footer" >
+  <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
+  <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
+  <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
+</div>
 
 ### 2.3.0
 
@@ -36,13 +49,6 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 - 添加IPv6网络监控支持
 - 添加IP地址转换成域名显示（需要自定义列里面选择Domain）
 - 修复HTTP监控端口冲突的问题
-
-
-<div class = "md_footer" >
-  <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
-  <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
-  <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
-</div>
 
 ### 2.2.1
 
