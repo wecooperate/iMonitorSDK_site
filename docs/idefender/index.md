@@ -35,6 +35,8 @@ nav:
 
 ![home](./doc/rules.png)
 
+![home](./doc/ask.png)
+
 ![home](./doc/templates.png)
 
 ![home](./doc/rule_process.png)
@@ -50,6 +52,30 @@ nav:
 ![home](./doc/about.png)
 
 ## 版本说明
+### 2.4.0.0
+
+- 添加更多的响应动作支持（拦截、**弹框**、记录）
+  - **添加拦截弹框交互支持**
+  - 添加弹框信任列表
+
+- **添加网络端口防火墙支持**
+  - 可以拦截永恒之蓝漏洞等
+
+- **添加导入默认规则**、规则导入、规则导出功能
+- 优化规则列表界面
+  - 支持Switch直接切换开启、关闭
+  - 支持响应动作下拉框切换
+  - 支持多选、del键删除
+
+- 规则编辑界面支持添加规则说明
+- 添加开机默认启动托盘（弹框需要托盘进程的支持）
+- 拦截记录添加响应动作列（方便识别记录模式）
+- 优化一些界面使用体验
+- 修复一些问题
+
+<div class = "md_footer" >
+  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
+</div>
 
 ### 2.3.0.0
 
@@ -63,10 +89,6 @@ nav:
 - 添加家长控制（密码保护）功能
 - 优化一些界面使用体验
 - 修复一些问题
-
-<div class = "md_footer" >
-  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
-</div>
 
 ### 2.2.0.0
 
