@@ -52,6 +52,18 @@ nav:
 ![home](./doc/about.png)
 
 ## 版本说明
+### 2.4.1.0
+
+主要是BUG修复，建议更新
+
+- 修复规则列表“响应动作”下拉框没有自适应宽度覆盖到开启按钮的问题
+- 修复规则市场更新通知极端情况可能导致没法正常启动的问题
+- 添加无文件攻击默认规则
+
+<div class = "md_footer" >
+  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
+</div>
+
 ### 2.4.0.0
 
 - 添加更多的响应动作支持（拦截、**弹框**、记录）
@@ -70,10 +82,6 @@ nav:
 - 规则市场更新添加红点提醒
 - 优化一些界面使用体验
 - 修复一些问题
-
-<div class = "md_footer" >
-  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
-</div>
 
 ### 2.3.0.0
 
