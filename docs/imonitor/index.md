@@ -31,16 +31,22 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 
 ## 更新说明
 
-### 2.4.0
+### 2.4.1
 
-- 添加进程列表视图
-- 修复一些体验问题
+- 更新驱动到最新的版本
+- 添加IPv6的DNS解析
+- 修复一些问题
 
 <div class = "md_footer" >
   <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
   <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
   <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
 </div>
+
+### 2.4.0
+
+- 添加进程列表视图
+- 修复一些体验问题
 
 ### 2.3.0
 
