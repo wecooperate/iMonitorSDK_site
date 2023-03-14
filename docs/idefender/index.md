@@ -54,6 +54,23 @@ nav:
 
 ## 版本说明
 
+### 2.5.1.0
+
+- 调整弹框超时时间（从20秒调整到30秒）
+- 弹框更多操作里面添加**“结束当前进程”**选项，更多操作的选项包括：
+  - 结束当前进程
+  - 信任进程 
+  - 信任目标
+  - 拦截进程
+  - 拦截目标
+  - 将当前进程加入白名单
+
+- 更新iMonitorSDK到2.5.0版本
+
+<div class = "md_footer" >
+  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
+</div>
+
 ### 2.5.0.0
 
 **重大版本，建议更新**
@@ -72,10 +89,6 @@ nav:
 - 添加规则过滤
 - 优化一些界面使用体验
 - 修复一些问题
-
-<div class = "md_footer" >
-  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
-</div>
 
 ### 2.4.1.0
 
