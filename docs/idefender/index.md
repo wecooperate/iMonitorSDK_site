@@ -54,6 +54,22 @@ nav:
 
 ## 版本说明
 
+### 2.5.2.0
+
+- 优化弹框
+  - 文案调整：信任调整成允许
+  - 添加启动进程的命令行参数显示
+
+- 优化优先级匹配的流程
+- 优化默认规则
+  - 文档保护添加使用说明
+
+- 优化托盘使用
+
+<div class = "md_footer" >
+  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
+</div>
+
 ### 2.5.1.0
 
 - 调整弹框超时时间（从20秒调整到30秒）
@@ -66,10 +82,6 @@ nav:
   - 将当前进程加入白名单
 
 - 更新iMonitorSDK到2.5.0版本
-
-<div class = "md_footer" >
-  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
-</div>
 
 ### 2.5.0.0
 
