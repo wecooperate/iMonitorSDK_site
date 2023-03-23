@@ -54,6 +54,18 @@ nav:
 
 ## 版本说明
 
+### 2.5.3.0
+
+- 安全加固添加文件加固、注册表加固选项
+  - 支持MBR保护
+
+- 修复导入初始化规则的时候RuleId重复的问题
+- 日志去掉敏感信息
+
+<div class = "md_footer" >
+  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
+</div>
+
 ### 2.5.2.0
 
 - 优化弹框
@@ -65,10 +77,6 @@ nav:
   - 文档保护添加使用说明
 
 - 优化托盘使用
-
-<div class = "md_footer" >
-  <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
-</div>
 
 ### 2.5.1.0
 
