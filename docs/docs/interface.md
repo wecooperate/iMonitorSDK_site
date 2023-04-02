@@ -34,7 +34,7 @@ interface IMonitorManager : public IUnknown
 | ----------------- | ------------------------------------------------------------ |
 | Start             | 设置驱动回调、安装并启动驱动                                 |
 | Control           | 跟驱动通讯的入口，详细参考cxMSGUserXxxx结构体                |
-| CreateRuleEngine  | 应用层扩展功能： 加载基于jsonlogic的规则引擎，详细参考[规则引擎](/docs/rule)部分 |
+| CreateRuleEngine  | 应用层扩展功能： 加载规则引擎，详细参考[规则引擎](/docs/rule)部分 |
 | CreateAgentEngine | 应用层扩展功能：创建网络中间人服务器，详细参考[网络代理](/docs/agent)部分 |
 | UnloadDriver      | 停止并卸载驱动                                               |
 

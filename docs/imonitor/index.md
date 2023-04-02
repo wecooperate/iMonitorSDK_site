@@ -30,18 +30,25 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 ![](./domain.png)
 
 ## 更新说明
+### 2.5.0
 
-### 2.4.1
+- **工作区添加联网共享工作区支持**
+  - 可以从共享工作区下载到其他人分享的工作区，一键切换快速实现具体场景的分析
 
-- 更新驱动到最新的版本
-- 添加IPv6的DNS解析
-- 修复一些问题
+- 进程列表添加过滤全部子进程、远程注入的进程功能
+- 优化一些使用细节
 
 <div class = "md_footer" >
   <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
   <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
   <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
 </div>
+
+### 2.4.1
+
+- 更新驱动到最新的版本
+- 添加IPv6的DNS解析
+- 修复一些问题
 
 ### 2.4.0
 
