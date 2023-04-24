@@ -30,6 +30,18 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 ![](./domain.png)
 
 ## 更新说明
+
+### 2.5.1
+
+- 修复分组在增量更新会导致部分数据因为缓存不被统计的问题
+  
+
+<div class = "md_footer" >
+  <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
+  <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
+  <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
+</div>
+
 ### 2.5.0
 
 - **工作区添加联网共享工作区支持**
@@ -37,12 +49,6 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 
 - 进程列表添加过滤全部子进程、远程注入的进程功能
 - 优化一些使用细节
-
-<div class = "md_footer" >
-  <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
-  <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
-  <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
-</div>
 
 ### 2.4.1
 
