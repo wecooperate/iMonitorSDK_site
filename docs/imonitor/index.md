@@ -31,16 +31,20 @@ iMonitor（冰镜 - 终端行为分析系统）【安全分析人员的必备工
 
 ## 更新说明
 
-### 2.5.1
+### 2.5.2
 
-- 修复分组在增量更新会导致部分数据因为缓存不被统计的问题
-  
-
+- 更新iMonitorSDK到最新的版本
+- 更新ip2region到最新的版本
+- 【Github反馈】添加过滤规则的时候，如果存在正在编辑但是没有添加，点击确认后提醒返回编辑。
 <div class = "md_footer" >
   <a href = "https://github.com/wecooperate/iMonitor"> <button> Github </button></a>
   <a href = "https://imonitorsdk.com/publish/iMonitor32.exe"> <button class="main-button"> 32位版本 </button></a>
   <a href = "https://imonitorsdk.com/publish/iMonitor64.exe"> <button class="main-button"> 64位版本 </button></a>
 </div>
+
+### 2.5.1
+
+- 修复分组在增量更新会导致部分数据因为缓存不被统计的问题
 
 ### 2.5.0
 
