@@ -86,7 +86,7 @@ nav:
 
 <div class = "md_footer" >
   <a href = "https://imonitorsdk.com/publish/iDefender.exe"> <button class="main-button"> 软件下载 </button></a>
-  <h4 style="color:red">因为关闭了微软的遥测、广告功能，被Microsoft Defender误报成木马，已经联系处理，如果出现被其他安全软件拦截的情况，请自行信任。</>
+  <h4 style="color:red">因为关闭了微软的遥测、广告功能，被Microsoft Defender误报成木马，已经联系处理，如果出现被其他安全软件拦截的情况，请自行信任。</h4>
 </div>
 
 
